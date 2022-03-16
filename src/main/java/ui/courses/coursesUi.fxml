@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.courses.CoursesUiController">
+   <children>
+      <VBox minHeight="700.0" minWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" minHeight="150.0" minWidth="1000.0">
+               <children>
+                  <VBox>
+                     <HBox.margin>
+                        <Insets left="20.0" right="50.0" />
+                     </HBox.margin>
+                     <children>
+                        <HBox minWidth="1081.0" prefHeight="79.0" prefWidth="1081.0">
+                           <children>
+                              <JFXTextField fx:id="txfSearch" focusColor="GREEN" labelFloat="true" prefHeight="39.0" prefWidth="1024.0" promptText="Search by Courses Name...">
+                                 <font>
+                                    <Font name="System Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="71.0" prefWidth="1111.0">
+                           <children>
+                              <VBox alignment="CENTER" minWidth="455.0" prefHeight="31.0" prefWidth="675.0">
+                                 <children>
+                                    <HBox prefHeight="25.0" prefWidth="474.0">
+                                       <children>
+                                          <Label text="Sort">
+                                             <HBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXRadioButton fx:id="rAll" text="All">
+                                             <HBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </JFXRadioButton>
+                                          <JFXRadioButton fx:id="rActive" text="Active">
+                                             <HBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </JFXRadioButton>
+                                          <JFXRadioButton fx:id="rDismissed" text="Dismissed">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </JFXRadioButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets right="40.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="71.0" prefWidth="580.0">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <JFXButton fx:id="btnDismissed" minHeight="50.0" minWidth="120.0" onAction="#btnDismissed" style="-fx-border-color: green; -fx-border-width: 1; -fx-border-radius: 10;" text="Dismissed">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnRefresh" minHeight="50.0" minWidth="120.0" onAction="#btnRefresh" style="-fx-border-color: green; -fx-border-width: 1; -fx-border-radius: 10;" text="Refresh">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox minHeight="462.0" minWidth="1000.0" style="-fx-border-color: green; -fx-border-width: 2 0 0 0;">
+               <children>
+                  <VBox fx:id="vTable" prefHeight="420.0" prefWidth="751.0">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <children>
+                        <TableView fx:id="CoursesTable" prefHeight="421.0" prefWidth="701.0">
+                           <columns>
+                              <TableColumn fx:id="cId" prefWidth="79.0" text="ID" />
+                              <TableColumn fx:id="cName" prefWidth="190.0" text="Name" />
+                              <TableColumn fx:id="cFee" prefWidth="224.0" text="Fee" />
+                              <TableColumn fx:id="cStatus" prefWidth="206.0" text="Status" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="460.0" prefWidth="410.0">
+                     <children>
+                        <HBox prefHeight="120.0" prefWidth="300.0" style="-fx-border-color: green; -fx-border-width: 2; -fx-border-radius: 10;">
+                           <padding>
+                              <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="42.0" prefWidth="256.0" text="ACTIVE STUDENTS">
+                                       <font>
+                                          <Font name="System Bold Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblTotalActive" alignment="CENTER" prefHeight="37.0" prefWidth="256.0" text="50">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="120.0" prefWidth="300.0" style="-fx-border-color: green; -fx-border-width: 2; -fx-border-radius: 10;">
+                           <padding>
+                              <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="42.0" prefWidth="256.0" text="COURSES">
+                                       <font>
+                                          <Font name="System Bold Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblCourses" alignment="CENTER" prefHeight="37.0" prefWidth="256.0" text="50">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="120.0" prefWidth="300.0" style="-fx-border-color: green; -fx-border-width: 2; -fx-border-radius: 10;">
+                           <padding>
+                              <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="42.0" prefWidth="256.0" text="ROOMS">
+                                       <font>
+                                          <Font name="System Bold Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblRoom" alignment="CENTER" prefHeight="37.0" prefWidth="256.0" text="50">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="40.0" right="40.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox fx:id="hTbl1" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="210.0" minHeight="100.0" minWidth="1000.0" prefHeight="134.0" prefWidth="1100.0">
+               <children>
+                  <JFXButton fx:id="btnCancel" minHeight="50.0" minWidth="120.0" onAction="#btnCancelAction" style="-fx-border-color: green; -fx-border-width: 1; -fx-border-radius: 10;" text="Cancel">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnEdit" minHeight="50.0" minWidth="120.0" onAction="#btnEditAction" style="-fx-border-color: green; -fx-border-width: 1; -fx-border-radius: 10;" text="Edit">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnAdd" minHeight="50.0" minWidth="120.0" onAction="#btnAddAction" style="-fx-background-color: green; -fx-border-color: green; -fx-border-width: 1; -fx-border-radius: 20;" styleClass="-" text="Add">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

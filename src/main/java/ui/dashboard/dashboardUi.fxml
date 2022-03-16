@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.dashboard.DashboardUiController">
+   <children>
+      <VBox minHeight="700.0" minWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" minHeight="160.0" minWidth="1000.0" prefWidth="1100.0" style="-fx-border-color: green; -fx-border-width: 0 0 2 0;">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="220.0" style="-fx-border-color: green; -fx-border-width: 2; -fx-border-radius: 10;">
+                     <padding>
+                        <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <VBox>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="42.0" prefWidth="256.0" text="STUDENTS">
+                                 <font>
+                                    <Font name="System Bold Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotalActive" alignment="CENTER" prefHeight="37.0" prefWidth="256.0" text="50">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="220.0" style="-fx-border-color: green; -fx-border-width: 2; -fx-border-radius: 10;">
+                     <padding>
+                        <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <VBox>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="42.0" prefWidth="256.0" text="COURSES">
+                                 <font>
+                                    <Font name="System Bold Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCourses" alignment="CENTER" prefHeight="37.0" prefWidth="256.0" text="50">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="220.0" style="-fx-border-color: green; -fx-border-width: 2; -fx-border-radius: 10;">
+                     <padding>
+                        <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <VBox>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="42.0" prefWidth="256.0" text="ROOMS">
+                                 <font>
+                                    <Font name="System Bold Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblRoom" alignment="CENTER" prefHeight="37.0" prefWidth="256.0" text="50">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox prefHeight="110.0" prefWidth="337.0" style="-fx-border-color: green; -fx-border-width: 2; -fx-border-radius: 10;">
+                     <children>
+                        <HBox prefHeight="80.0" prefWidth="200.0" style="-fx-border-color: grey; -fx-border-radius: 20;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbldaybefore" text="Wecnesday" textFill="GREEN">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblYesterday" text="20" textFill="GREEN">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="220.0" style="-fx-border-color: grey; -fx-border-radius: 20;">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbldaynow" text="Wecnesday" textFill="GREEN">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblToday" text="20" textFill="GREEN">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="200.0" style="-fx-border-color: grey; -fx-border-radius: 20;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label fx:id="lbldayafter" text="Wecnesday" textFill="GREEN">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblTomorrow" text="20" textFill="GREEN">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="240.0" prefWidth="1100.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" spacing="680.0">
+                           <children>
+                              <Label text="Total Student">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="cbTime" onAction="#chooseDate" prefHeight="25.0" prefWidth="203.0" promptText="Time" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </HBox>
+                        <BarChart fx:id="chartStudents" prefHeight="192.0" prefWidth="1100.0">
+                          <xAxis>
+                            <CategoryAxis fx:id="AxisX" label="Date" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="AxisY" label="Students" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="300.0" prefWidth="1100.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="280.0" prefWidth="406.0">
+                     <children>
+                        <PieChart fx:id="chartPieStudent" title="Courses" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="280.0" prefWidth="650.0">
+                     <children>
+                        <VBox prefHeight="280.0" prefWidth="300.0">
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TableView fx:id="tblCourses" prefHeight="268.0" prefWidth="245.0">
+                                <columns>
+                                  <TableColumn fx:id="cCourseName" prefWidth="102.0" text="Course Name" />
+                                  <TableColumn fx:id="cCStudents" prefWidth="141.0" text="Total Student" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="280.0" prefWidth="300.0">
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <TableView fx:id="tblRooms" prefHeight="282.0" prefWidth="264.0">
+                                <columns>
+                                  <TableColumn fx:id="cRoomId" prefWidth="38.0" text="ID" />
+                                    <TableColumn fx:id="cRoomName" prefWidth="104.0" text="Room Name" />
+                                  <TableColumn fx:id="cRStudents" prefWidth="101.0" text="Total Students" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

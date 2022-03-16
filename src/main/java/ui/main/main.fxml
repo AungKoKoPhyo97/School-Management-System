@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.main.MainController">
+   <children>
+      <BorderPane fx:id="mainBorder" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox maxHeight="1.7976931348623157E308" minHeight="700.0" minWidth="200.0" prefHeight="600.0" style="-fx-border-color: GREEN; -fx-border-width: 0 2 0 0;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="200.0" text="School Name" textAlignment="RIGHT" textFill="GREEN">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane>
+                     <children>
+                        <HBox minHeight="50.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <JFXButton fx:id="btnDashboard" onAction="#DashboardFxml" prefHeight="70.0" prefWidth="200.0" text="Dashboard" textFill="GREEN">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="GREEN" glyphName="TH_LARGE" size="30" wrappingWidth="40.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnStudents" onAction="#StudentsFxml" prefHeight="70.0" prefWidth="200.0" text="Students" textFill="GREEN">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView id=".mainIcon" fill="GREEN" glyphName="GRADUATION_CAP" size="30" wrappingWidth="40.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnTeacher" onAction="#TeacherFxml" prefHeight="70.0" prefWidth="200.0" text="Teachers" textFill="GREEN">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView id=".mainIcon" fill="GREEN" glyphName="GROUP" size="30" text="" wrappingWidth="40.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCourses" onAction="#CoursesFxml" prefHeight="70.0" prefWidth="200.0" text="Courses" textFill="GREEN">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView id=".mainIcon" fill="GREEN" glyphName="BOOK" size="30" wrappingWidth="40.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnRooms" onAction="#RoomsFxml" prefHeight="70.0" prefWidth="200.0" text="Rooms" textFill="GREEN">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView id=".mainIcon" fill="GREEN" glyphName="BUILDING" size="30" wrappingWidth="40.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
